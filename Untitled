@@ -1,0 +1,12 @@
+
+TweetStream.configure do |config|
+  config.consumer_key       = ENV["TWITTER_KEY"]
+  config.consumer_secret    = ENV["TWITTER_SECRET"]
+  config.oauth_token        = ENV["TWITTER_OAUTH_KEY"]
+  config.oauth_token_secret = ENV["TWITTER_OAUTH_SECRET"]
+  config.auth_method        = :oauth
+end
+
+TweetStream::Client.new.track('Benjamin Netanyahu, Park Geun-hye, Ayatollah Khamenei, King Salman, Michel Temer, Shinzo Abe, Francois Hollande, David Cameron, Narendra Modi, Angela Merkel, Vladimir Putin, Xi Jinping, Donald Trump') do |tweet|
+  Tweet.create(text: tweet.text, username: tweet.user.screen_name, language: tweet.lang, created_at: tweet.created_at)
+end
