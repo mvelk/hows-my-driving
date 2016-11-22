@@ -1,7 +1,6 @@
 class Api::WorldLeadersController < ApplicationController
   def show
-    @leader = WorldLeader.find(params[:id])
-    @sentiments = @leader.sentiments
+    @leaders = WorldLeader.all
   end
 
   def index
