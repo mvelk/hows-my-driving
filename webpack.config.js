@@ -7,8 +7,10 @@ module.exports = {
   },
   module: {
     loaders: [
-      { loader: 'babel-loader',
-        query: { presets: ['es2015'] }
+      {
+        test: /\.js?$/,
+        exclude: /(node_modules|bower_components)/,
+        loaders: ["babel?presets[]=es2015"]
       },
       { test: /\.coffee$/, loader: "coffee-loader" },
       { test: /\.(coffee\.md|litcoffee)$/, loader: "coffee-loader?literate" }
