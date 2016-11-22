@@ -7,6 +7,9 @@ module.exports = {
   },
   module: {
     loaders: [
+      { loader: 'babel',
+        query: { presets: ['es2015'] }
+      },
       { test: /\.coffee$/, loader: "coffee-loader" },
       { test: /\.(coffee\.md|litcoffee)$/, loader: "coffee-loader?literate" }
     ]
