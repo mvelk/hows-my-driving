@@ -35,7 +35,7 @@ gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'annotate'
 gem 'twitter'
-
+gem 'figaro'
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor' # error feedback
