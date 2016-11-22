@@ -35,6 +35,12 @@ gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'annotate'
 gem 'twitter'
+
+group :production do
+  gem 'newrelic_rpm'
+  gem 'rails_12factor' # error feedback
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
