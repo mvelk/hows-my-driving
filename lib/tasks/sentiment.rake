@@ -13,7 +13,6 @@ namespace :sentiment do
       tweet_text = tweets.map(&:text).join(", ")
       query_string=URI.encode(world_leader.name.downcase)
       result = alchy.combined('text', tweet_text, { extract: 'entities,keywords,concept', sentiment: 1 })
-      debugger;
       if result['entities']
         sentiment = Sentiment.create(world_leader_id: world_leader.id)
         result['concepts'].each do |concept|
