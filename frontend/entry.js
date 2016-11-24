@@ -17,9 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .margin( "15px 0" )
       .color("sentiment_score")
       .size("count")
+
       .container("#viz")
       .legend({
         "font": { "color": "rgba(255, 255, 255, .65)"}
+      })
+      .tooltip({
+        "background": "rgba(255, 255, 255, .9)",
       })
       .background("rgb(30,30,30)")
       .draw();
