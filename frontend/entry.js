@@ -11,19 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let data = worldLeaders.children;
     var visualization = d3plus.viz()
       .container("#viz")
+      .margin( "15px 0" )
       .data(data)
       .type("tree_map")
       .id("name")
-      .margin( "15px 0" )
       .color("sentiment_score")
       .size("count")
-
-      .container("#viz")
-      .legend({
-        "font": { "color": "rgba(255, 255, 255, .65)"}
-      })
+      .labels({"align": "left", "valign": "top"})
       .tooltip({
         "background": "rgba(255, 255, 255, .9)",
+      })
+      .legend({
+        "font": { "color": "rgba(255, 255, 255, .65)"}
       })
       .background("rgb(30,30,30)")
       .draw();

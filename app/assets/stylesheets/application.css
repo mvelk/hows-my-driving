@@ -22,32 +22,6 @@ body {
   background-color: rgb(30, 30, 30);
   color: rgba(255, 255, 255, .65);
   font-weight: 300;
-
-}
-
- #root {
-   margin: 0 auto;
-   width: 90%;
-   height: 90vh;
- }
-
-.title {
-
-}
-
-.description p {
-  font-size: 1.15em;
-  margin: .33em 0;
-}
-
-a:link {
-  color: rgba(255, 255, 255, .75)
-}
-a:visited {
-  color: rgba(255, 255, 255, .75)
-}
-a:hover {
-  color: rgba(255, 255, 255, .90)
 }
 
 header {
@@ -62,13 +36,106 @@ header h1 {
   margin: .33em 0;
   color: rgba(255, 255, 255, .9);
 }
+
 .subhead {
   font-size: 1.5em;
   margin: .33em 0;
   color: rgba(255, 255, 255, .7);
 }
 
+.legendary {
+  color: rgba(255, 255, 255, .5);
+}
+
+.heavy {
+  font-weight: 400;
+}
+
+.box {
+  position: relative;
+  height: 20px;
+  width: 20px;
+}
+
+.gradient {
+  background-image:
+    linear-gradient(
+      to right,
+      red,
+      rgb(255, 255, 0),
+      green
+    );
+}
+
+ #root {
+   margin: 0 auto;
+   width: 90%;
+   height: 90vh;
+ }
+
+.tagline {
+  font-size: 1.25em;
+  margin: .33em 0;
+  color: rgba(255, 255, 255, .7);
+}
+
+.description {
+  max-width: 50%;
+  text-align: right;
+}
+
+.title {
+
+}
+
+.legendary {
+  font-size: 1.15em;
+  margin: .33em 0;
+}
+
 footer {
   margin-bottom: 25px;
   color: rgba(255, 255, 255, .5);
+}
+
+a:link {
+  color: rgba(255, 255, 255, .75)
+}
+
+a:visited {
+  color: rgba(255, 255, 255, .75)
+}
+
+a:hover {
+  color: rgba(255, 255, 255, .90)
+}
+
+.social a, svg {
+  display: inline-block
+}
+.social svg {
+  vertical-align: middle;
+  height: 25px;
+  width: 25px;
+  fill: white;
+}
+
+.social svg:hover {
+  border-radius: 100%;
+  fill: black;
+  background-color: white;
+  transform: scale(1.25);
+  transition: background-color .5s, transform .5s ease-out;
+}
+
+footer p {
+  margin: .33em 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
