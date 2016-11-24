@@ -16,7 +16,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-api_key.txt
 /config/secrets.yml
+
 # Ignore application configuration
 /config/application.yml

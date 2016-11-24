@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   rootEl.appendChild(entities_container);
 
   const showSuccess = (worldLeaders) => {
-    console.log(worldLeaders);
     let data = worldLeaders.children;
-    console.log(data);
     var visualization = d3plus.viz()
       .container("#viz")
       .data(data)
