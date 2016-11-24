@@ -7,14 +7,6 @@ window.d3plus = d3plus;
 document.addEventListener("DOMContentLoaded", () => {
   let rootEl = document.getElementById('root');
 
-  rootEl.innerHTML += '<h1>How\'s My Driving?</h1>';
-
-  // Create sentiment box container
-  let entities_container = document.createElement("div");
-  entities_container.id = 'viz';
-  entities_container.style.height = '600px';
-  rootEl.appendChild(entities_container);
-
   const showSuccess = (worldLeaders) => {
     let data = worldLeaders.children;
     var visualization = d3plus.viz()
@@ -22,8 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .data(data)
       .type("tree_map")
       .id("name")
+      .margin( "15px 0" )
       .color("sentiment_score")
       .size("count")
+      .container("#viz")
+      .legend({
+        "font": { "color": "rgba(255, 255, 255, .65)"}
+      })
+      .background("rgb(30,30,30)")
       .draw();
 
   };
