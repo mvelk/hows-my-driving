@@ -6,6 +6,6 @@
 ![Main View](/hows-my-driving.png)
 
 ## Features
-* Utilize OAuth2 and Twitter’s Streaming API to pull and store microblog traffic on 12 heads of state
-* Analyze sentiment using IBM Watson’s Alchemy natural language processing algorithms
-* Visualize sentiment and tweet volume data as treemap using D3.js, jQuery and vanilla JS
+* Utilizes OAuth2 and Twitter’s Streaming API to pull and store microblog traffic on 12 heads of state
+* Analyzes sentiment using IBM Watson’s Alchemy natural language processing algorithms
+* Visualizes sentiment and tweet volume data as treemap using D3.js, jQuery and vanilla JS
