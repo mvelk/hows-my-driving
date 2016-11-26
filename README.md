@@ -1,24 +1,6 @@
-# README
+# Real-time visualization of public sentiment on world leaders
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## MVP
+* Utilize OAuth2 and Twitter’s Streaming API to pull and store microblog traffic on 14 heads of state
+* Analyze sentiment using IBM Watson’s Alchemy natural language processing algorithms
+* Visualize sentiment and tweet volume data as treemap using D3.js, jQuery and vanilla JS
